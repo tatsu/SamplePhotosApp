@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AFw-ea-UbI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AFw-ea-UbI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Photos-->
         <scene sceneID="mUr-pn-Lqf">
             <objects>
-                <tableViewController id="Eg3-EV-Pfg" customClass="AAPLRootListViewController" sceneMemberID="viewController">
+                <tableViewController id="Eg3-EV-Pfg" customClass="RootListViewController" customModule="SamplePhotosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="G9F-3P-tcj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AllPhotosCell" id="ev4-QQ-DWY">
                                 <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ev4-QQ-DWY" id="acY-1x-N5M">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="TL6-96-rkl" kind="show" identifier="showAllPhotos" id="zdI-cg-b4l"/>
                                 </connections>
@@ -32,11 +29,9 @@
                                 <rect key="frame" x="0.0" y="158" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDD-z7-Wa2" id="bQS-g3-8h5">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="TL6-96-rkl" kind="show" identifier="showCollection" id="sZd-hd-3lH"/>
                                 </connections>
@@ -50,7 +45,7 @@
                     <navigationItem key="navigationItem" title="Photos" id="PHG-DW-u7x">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="DlC-wZ-zIE">
                             <connections>
-                                <action selector="handleAddButtonItem:" destination="Eg3-EV-Pfg" id="LAq-iV-AWd"/>
+                                <action selector="handleAddButtonItem:" destination="Eg3-EV-Pfg" id="v3A-aq-KX1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,7 +61,6 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7tL-ub-r9I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xa5-sJ-pGd">
                             <size key="itemSize" width="80" height="80"/>
@@ -84,21 +78,17 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gvb-Xz-yyo">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            <animations/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-Ht-N22">
                                             <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
-                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="28" placeholder="YES" id="Zpc-EO-hhj"/>
                                                 <constraint firstAttribute="height" constant="28" placeholder="YES" id="dSs-Zh-sVU"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="gvb-Xz-yyo" firstAttribute="leading" secondItem="Ugt-80-ozT" secondAttribute="leading" id="0Sp-Vw-5RD"/>
                                     <constraint firstItem="gvb-Xz-yyo" firstAttribute="top" secondItem="Ugt-80-ozT" secondAttribute="top" id="1Fk-Kt-e5p"/>
@@ -147,15 +137,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I1t-V9-K21">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StA-CM-oAy" customClass="PHLivePhotoView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="StA-CM-oAy" secondAttribute="trailing" id="KVl-X6-3Ps"/>
@@ -174,7 +161,6 @@
                         <progressView key="titleView" hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="Wu5-52-7Na">
                             <rect key="frame" x="20" y="21" width="524" height="2.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
                         </progressView>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3Rb-AR-iXx">
                             <connections>
@@ -214,12 +200,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o9t-Rx-LjY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5qa-1l-V3W">
                         <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="Eg3-EV-Pfg" kind="relationship" relationship="rootViewController" id="nR9-gj-voe"/>
