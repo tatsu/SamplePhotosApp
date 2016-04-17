@@ -158,7 +158,7 @@ class RootListViewController: UITableViewController, PHPhotoLibraryChangeObserve
         }
     }
 
-    // MARK - Actions
+    // MARK: - Actions
 
     @IBAction func handleAddButtonItem(sender: AnyObject) {
         // Prompt user from new album title.
