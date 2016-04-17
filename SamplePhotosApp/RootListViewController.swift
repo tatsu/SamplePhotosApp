@@ -61,7 +61,7 @@ class RootListViewController: UITableViewController, PHPhotoLibraryChangeObserve
          Get the AAPLAssetGridViewController being pushed and the UITableViewCell
          that triggered the segue.
          */
-        guard let assetGridViewController = segue.destinationViewController as? AAPLAssetGridViewController, let cell =  sender as? UITableViewCell else {
+        guard let assetGridViewController = segue.destinationViewController as? AssetGridViewController, let cell =  sender as? UITableViewCell else {
             return
         }
 

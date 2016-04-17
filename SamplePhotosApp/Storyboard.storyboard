@@ -57,7 +57,7 @@
         <!--Asset Grid View Controller-->
         <scene sceneID="1DO-QJ-EBB">
             <objects>
-                <collectionViewController id="TL6-96-rkl" customClass="AAPLAssetGridViewController" sceneMemberID="viewController">
+                <collectionViewController id="TL6-96-rkl" customClass="AssetGridViewController" customModule="SamplePhotosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7tL-ub-r9I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIl-Bo-qaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem systemItem="add" id="k25-qG-Tz2">
                     <connections>
-                        <action selector="handleAddButtonItem:" destination="TL6-96-rkl" id="wg4-eM-RH6"/>
+                        <action selector="handleAddButtonItem:" destination="TL6-96-rkl" id="YSC-Fh-FhQ"/>
                     </connections>
                 </barButtonItem>
             </objects>
@@ -159,7 +159,7 @@
                     <navigationItem key="navigationItem" id="4Sl-nL-dex">
                         <nil key="title"/>
                         <progressView key="titleView" hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="Wu5-52-7Na">
-                            <rect key="frame" x="20" y="21" width="524" height="2.5"/>
+                            <rect key="frame" x="20" y="21" width="524" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3Rb-AR-iXx">
