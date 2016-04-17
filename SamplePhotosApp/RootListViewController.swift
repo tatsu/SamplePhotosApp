@@ -98,7 +98,7 @@ class RootListViewController: UITableViewController, PHPhotoLibraryChangeObserve
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var numberOfRows = 0
 
-        if (section == 0) {
+        if section == 0 {
             // The "All Photos" section only ever has a single row.
             numberOfRows = 1
         } else {
@@ -112,7 +112,7 @@ class RootListViewController: UITableViewController, PHPhotoLibraryChangeObserve
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell!
 
-        if (indexPath.section == 0) {
+        if indexPath.section == 0 {
             cell = tableView.dequeueReusableCellWithIdentifier(AllPhotosReuseIdentifier, forIndexPath:indexPath)
             cell.textLabel?.text = NSLocalizedString("All Photos", comment: "")
         } else {
