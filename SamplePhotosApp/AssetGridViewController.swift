@@ -136,7 +136,7 @@ class AssetGridViewController: UICollectionViewController, PHPhotoLibraryChangeO
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         // Dequeue an AAPLGridViewCell.
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellReuseIdentifier, forIndexPath: indexPath) as! AAPLGridViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellReuseIdentifier, forIndexPath: indexPath) as! GridViewCell
 
         if let asset = self.assetsFetchResults?[indexPath.item] as? PHAsset {
             cell.representedAssetIdentifier = asset.localIdentifier

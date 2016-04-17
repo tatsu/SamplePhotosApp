@@ -11,9 +11,9 @@
 		1734B5E81CC1BCF6003D9A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1734B5E71CC1BCF6003D9A84 /* AppDelegate.swift */; };
 		1734B5EA1CC1D09E003D9A84 /* RootListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1734B5E91CC1D09E003D9A84 /* RootListViewController.swift */; };
 		1734B5EC1CC24235003D9A84 /* AssetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1734B5EB1CC24235003D9A84 /* AssetGridViewController.swift */; };
+		173A5A001CC3A87B005831EC /* GridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A59FF1CC3A87B005831EC /* GridViewCell.swift */; };
 		42B1025C1BB0925000553A16 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B1025B1BB0925000553A16 /* Launch Screen.storyboard */; };
 		A7CF22D71933ED8900E6E88E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7CF22D61933ED8900E6E88E /* Images.xcassets */; };
-		A7CF22FA1933F51500E6E88E /* AAPLGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF22F91933F51500E6E88E /* AAPLGridViewCell.m */; };
 		A7CF22FD1933FD2600E6E88E /* AAPLAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CF22FC1933FD2600E6E88E /* AAPLAssetViewController.m */; };
 		B53F838C1BB15A6100BE25D4 /* NSIndexSet+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = B53F838B1BB15A6100BE25D4 /* NSIndexSet+Convenience.m */; };
 		B53F838F1BB15B1400BE25D4 /* UICollectionView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = B53F838E1BB15B1400BE25D4 /* UICollectionView+Convenience.m */; };
@@ -26,13 +26,12 @@
 		1734B5E71CC1BCF6003D9A84 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1734B5E91CC1D09E003D9A84 /* RootListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootListViewController.swift; sourceTree = "<group>"; };
 		1734B5EB1CC24235003D9A84 /* AssetGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
+		173A59FF1CC3A87B005831EC /* GridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewCell.swift; sourceTree = "<group>"; };
 		42B1025B1BB0925000553A16 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A738785B1989954300D76B24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7CF22CC1933ED8900E6E88E /* SamplePhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplePhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CF22D01933ED8900E6E88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7CF22D61933ED8900E6E88E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A7CF22F81933F51500E6E88E /* AAPLGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLGridViewCell.h; sourceTree = "<group>"; };
-		A7CF22F91933F51500E6E88E /* AAPLGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLGridViewCell.m; sourceTree = "<group>"; };
 		A7CF22FB1933FD2600E6E88E /* AAPLAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLAssetViewController.h; sourceTree = "<group>"; };
 		A7CF22FC1933FD2600E6E88E /* AAPLAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AAPLAssetViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B53F838A1BB15A6100BE25D4 /* NSIndexSet+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+Convenience.h"; sourceTree = "<group>"; };
@@ -76,8 +75,6 @@
 			children = (
 				A7CF22FB1933FD2600E6E88E /* AAPLAssetViewController.h */,
 				A7CF22FC1933FD2600E6E88E /* AAPLAssetViewController.m */,
-				A7CF22F81933F51500E6E88E /* AAPLGridViewCell.h */,
-				A7CF22F91933F51500E6E88E /* AAPLGridViewCell.m */,
 				11A9AC69193531AE00C5AC7F /* Storyboard.storyboard */,
 				A7CF22D61933ED8900E6E88E /* Images.xcassets */,
 				B53F83891BB15A3600BE25D4 /* Convenience Categories */,
@@ -87,6 +84,7 @@
 				1734B5E61CC1BCF6003D9A84 /* SamplePhotosApp-Bridging-Header.h */,
 				1734B5E91CC1D09E003D9A84 /* RootListViewController.swift */,
 				1734B5EB1CC24235003D9A84 /* AssetGridViewController.swift */,
+				173A59FF1CC3A87B005831EC /* GridViewCell.swift */,
 			);
 			path = SamplePhotosApp;
 			sourceTree = "<group>";
@@ -182,13 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1734B5E81CC1BCF6003D9A84 /* AppDelegate.swift in Sources */,
-				A7CF22FA1933F51500E6E88E /* AAPLGridViewCell.m in Sources */,
 				1734B5EC1CC24235003D9A84 /* AssetGridViewController.swift in Sources */,
 				A7CF22FD1933FD2600E6E88E /* AAPLAssetViewController.m in Sources */,
 				B53F838C1BB15A6100BE25D4 /* NSIndexSet+Convenience.m in Sources */,
 				B53F83921BB15BAA00BE25D4 /* CIImage+Convenience.m in Sources */,
 				B53F838F1BB15B1400BE25D4 /* UICollectionView+Convenience.m in Sources */,
 				1734B5EA1CC1D09E003D9A84 /* RootListViewController.swift in Sources */,
+				173A5A001CC3A87B005831EC /* GridViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
