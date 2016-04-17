@@ -77,6 +77,7 @@ class RootListViewController: UITableViewController, PHPhotoLibraryChangeObserve
             } else /* if segue.identifier == CollectionSegue */ {
                 // Get the PHAssetCollection for the selected row.
                 guard let assetCollection = fetchResult[indexPath.row] as? PHAssetCollection else {
+                    // TODO: Implement the PHCollectionList case. e.g., iPhone Events
                     return
                 }
 
