@@ -76,7 +76,7 @@ class AssetGridViewController: UICollectionViewController, PHPhotoLibraryChangeO
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Configure the destination AAPLAssetViewController.
-        guard let assetViewController = segue.destinationViewController as? AAPLAssetViewController, let cell =  sender as? UICollectionViewCell, let indexPath = self.collectionView!.indexPathForCell(cell) else {
+        guard let assetViewController = segue.destinationViewController as? AssetViewController, let cell =  sender as? UICollectionViewCell, let indexPath = self.collectionView!.indexPathForCell(cell) else {
             return
         }
 

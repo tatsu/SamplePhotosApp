@@ -126,7 +126,7 @@
         <!--Asset View Controller-->
         <scene sceneID="kWQ-TD-0bM">
             <objects>
-                <viewController id="fvd-bf-hd7" customClass="AAPLAssetViewController" sceneMemberID="viewController">
+                <viewController id="fvd-bf-hd7" customClass="AssetViewController" customModule="SamplePhotosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sZD-4F-xef"/>
                         <viewControllerLayoutGuide type="bottom" id="4QP-ma-cUv"/>
@@ -164,7 +164,7 @@
                         </progressView>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="3Rb-AR-iXx">
                             <connections>
-                                <action selector="handleEditButtonItem:" destination="fvd-bf-hd7" id="JaE-jG-QhV"/>
+                                <action selector="handleEditButtonItem:" destination="fvd-bf-hd7" id="cVY-H2-UaV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -181,13 +181,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2a-l0-npR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <barButtonItem style="plain" systemItem="play" id="yVp-DC-eAd">
                     <connections>
-                        <action selector="handlePlayButtonItem:" destination="fvd-bf-hd7" id="ENV-7b-CYs"/>
+                        <action selector="handlePlayButtonItem:" destination="fvd-bf-hd7" id="r9b-pY-R1c"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem style="plain" systemItem="flexibleSpace" id="ku7-hr-f4Q"/>
                 <barButtonItem style="plain" systemItem="trash" id="GTy-T5-u0x">
                     <connections>
-                        <action selector="handleTrashButtonItem:" destination="fvd-bf-hd7" id="sAX-mm-IoA"/>
+                        <action selector="handleTrashButtonItem:" destination="fvd-bf-hd7" id="bx5-NL-Qrz"/>
                     </connections>
                 </barButtonItem>
             </objects>
