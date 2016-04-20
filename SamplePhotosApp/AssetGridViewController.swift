@@ -111,15 +111,21 @@ class AssetGridViewController: UICollectionViewController, PHPhotoLibraryChangeO
                  */
                 self.collectionView!.performBatchUpdates({
                     if let removedIndexes = collectionChanges.removedIndexes where removedIndexes.count > 0 {
-                        self.collectionView!.deleteItemsAtIndexPaths(removedIndexes.aapl_indexPathsFromIndexesWithSection(0) as! [NSIndexPath])
+                        if let indexPaths = removedIndexes.aapl_indexPathsFromIndexesWithSection(0) {
+                            self.collectionView!.deleteItemsAtIndexPaths(indexPaths)
+                        }
                     }
 
                     if let insertedIndexes = collectionChanges.insertedIndexes where insertedIndexes.count > 0 {
-                        self.collectionView!.insertItemsAtIndexPaths(insertedIndexes.aapl_indexPathsFromIndexesWithSection(0) as! [NSIndexPath])
+                        if let indexPaths = insertedIndexes.aapl_indexPathsFromIndexesWithSection(0) {
+                            self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+                        }
                     }
 
                     if let changedIndexes = collectionChanges.changedIndexes where changedIndexes.count > 0 {
-                        self.collectionView!.reloadItemsAtIndexPaths(changedIndexes.aapl_indexPathsFromIndexesWithSection(0) as! [NSIndexPath])
+                        if let indexPaths = changedIndexes.aapl_indexPathsFromIndexesWithSection(0) {
+                            self.collectionView!.reloadItemsAtIndexPaths(indexPaths)
+                        }
                     }
                 }, completion: nil)
             }
@@ -228,12 +234,12 @@ class AssetGridViewController: UICollectionViewController, PHPhotoLibraryChangeO
 
             computeDifferenceBetweenRect(self.previousPreheatRect, andRect: preheatRect, removedHandler: {
                 (removedRect: CGRect) ->Void in
-                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(removedRect) as? [NSIndexPath] {
+                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(removedRect) {
                     removedIndexPaths += indexPaths
                 }
             }, addedHandler: {
                 (addedRect: CGRect) -> Void in
-                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(addedRect) as? [NSIndexPath] {
+                if let indexPaths = self.collectionView!.aapl_indexPathsForElementsInRect(addedRect) {
                     addedIndexPaths += indexPaths
                 }
             })

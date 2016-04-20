@@ -428,19 +428,20 @@ class AssetViewController: UIViewController, PHPhotoLibraryChangeObserver, PHLiv
                              */
                             let contentEditingOutput = PHContentEditingOutput(contentEditingInput: contentEditingInput)
 
-                            let jpegData = outputImage.aapl_jpegRepresentationWithCompressionQuality(0.9)
-                            jpegData.writeToURL(contentEditingOutput.renderedContentURL, atomically: true)
-                            contentEditingOutput.adjustmentData = adjustmentData
+                            if let jpegData = outputImage.aapl_jpegRepresentationWithCompressionQuality(0.9) {
+                                jpegData.writeToURL(contentEditingOutput.renderedContentURL, atomically: true)
+                                contentEditingOutput.adjustmentData = adjustmentData
 
-                            // Ask the shared PHPhotoLinrary to perform the changes.
-                            PHPhotoLibrary.sharedPhotoLibrary().performChanges({
-                                let request = PHAssetChangeRequest(forAsset: asset)
-                                request.contentEditingOutput = contentEditingOutput
-                            }, completionHandler: { (success: Bool, error: NSError?) -> Void in
-                                if !success {
-                                    NSLog("Error: \(error)")
-                                }
-                            })
+                                // Ask the shared PHPhotoLinrary to perform the changes.
+                                PHPhotoLibrary.sharedPhotoLibrary().performChanges({
+                                    let request = PHAssetChangeRequest(forAsset: asset)
+                                    request.contentEditingOutput = contentEditingOutput
+                                }, completionHandler: { (success: Bool, error: NSError?) -> Void in
+                                    if !success {
+                                        NSLog("Error: \(error)")
+                                    }
+                                })
+                            }
                         }
                     }
                 }
