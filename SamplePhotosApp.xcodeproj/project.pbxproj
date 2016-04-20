@@ -22,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		11A9AC69193531AE00C5AC7F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		1734B5E61CC1BCF6003D9A84 /* SamplePhotosApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SamplePhotosApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		1734B5E71CC1BCF6003D9A84 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1734B5E91CC1D09E003D9A84 /* RootListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootListViewController.swift; sourceTree = "<group>"; };
 		1734B5EB1CC24235003D9A84 /* AssetGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetGridViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 				A7CF22CF1933ED8900E6E88E /* Supporting Files */,
 				42B1025B1BB0925000553A16 /* Launch Screen.storyboard */,
 				1734B5E71CC1BCF6003D9A84 /* AppDelegate.swift */,
-				1734B5E61CC1BCF6003D9A84 /* SamplePhotosApp-Bridging-Header.h */,
 				1734B5E91CC1D09E003D9A84 /* RootListViewController.swift */,
 				1734B5EB1CC24235003D9A84 /* AssetGridViewController.swift */,
 				173A59FF1CC3A87B005831EC /* GridViewCell.swift */,
@@ -279,7 +277,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tatsu.apple-samplecode.SamplePhotosApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SamplePhotosApp/SamplePhotosApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -297,7 +294,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tatsu.apple-samplecode.SamplePhotosApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "SamplePhotosApp/SamplePhotosApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
